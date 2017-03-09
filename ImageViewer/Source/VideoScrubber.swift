@@ -25,7 +25,8 @@ open class VideoScrubber: UIControl {
 
         willSet {
 
-            if newValue == nil {
+            // jjfive bug fix
+            // if newValue == nil {
 
                 if let player = player {
 
@@ -43,7 +44,7 @@ open class VideoScrubber: UIControl {
                         self.periodicObserver = nil
                     }
                 }
-            }
+            //}
         }
 
         didSet {

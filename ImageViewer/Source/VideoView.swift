@@ -17,11 +17,11 @@ class VideoView: UIView {
 
         willSet {
 
-            if newValue == nil {
-
-                player?.removeObserver(self, forKeyPath: "status")
-                player?.removeObserver(self, forKeyPath: "rate")
-            }
+            // jjfive bug fix
+            // if newValue == nil {
+                 player?.removeObserver(self, forKeyPath: "status")
+                 player?.removeObserver(self, forKeyPath: "rate")
+            // }
         }
 
         didSet {
